@@ -1,0 +1,41 @@
+body {
+    background-image: url(background.jpg);
+    font-family: cicle;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+}
+
+@font-face {
+    font-family: cicle;
+    src: url(ciclefina.ttf);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li a {
+    display: block;
+    font-size: 26px;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    text-align: center;
+}
+
+li a:hover {
+    background-color: #3498db;
+    color: white;
+}
