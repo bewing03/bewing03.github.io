@@ -6,18 +6,55 @@
 </head>
 <body>
     <h1>My Projects</h1>
-<ul>
-    <li><a href="https://bewing03.github.io/comp20/annotation">Annotation</a></li>
-    <li><a href="https://gauculator.herokuapp.com/">Gau-culator</a></li>
-    <li><a href="https://bewing03.github.io/comp20/messages">Messages</a></li>
-    <li><a href="https://bewing03.github.io/comp20/notuber">Not Uber</a></li>
-    <li><a href="https://bewing03.github.io/comp20/notuber_backend">Not Uber Backend</a></li>
-    <li><a href="https://bewing03.github.io/comp20/portfolio">Portfolio</a></li>
-    <li><a href="https://bewing03.github.io/comp20/responsive">Responsive</a></li>
-    <li><a href="https://bewing03.github.io/comp20/security">Security</a></li>
-    <li><a href="https://loud-farm.herokuapp.com">Loud Farm</a></li>
-</ul>
+<div id="container">
+    <div id="left">
+        <ul>
+            <li onmouseover="hover('annotation')"><a href="https://bewing03.github.io/comp20/annotation">Annotation</a></li>
+            <li onmouseover="hover('gauculator')"><a href="https://gauculator.herokuapp.com/">Gau-culator</a></li>
+            <li onmouseover="hover('messages')"><a href="https://bewing03.github.io/comp20/messages">Messages</a></li>
+            <li onmouseover="hover('notuber')"><a href="https://bewing03.github.io/comp20/notuber">Not Uber</a></li>
+            <li onmouseover="hover('notuberback')"><a href="https://bewing03.github.io/comp20/notuber_backend">Not Uber Backend</a></li>
+            <li onmouseover="hover('portfolio')"><a href="https://bewing03.github.io/comp20/portfolio">Portfolio</a></li>
+            <li onmouseover="hover('responsive')"><a href="https://bewing03.github.io/comp20/responsive">Responsive</a></li>
+            <li onmouseover="hover('security')"><a href="https://bewing03.github.io/comp20/security">Security</a></li>
+            <li onmouseover="hover('loudfarm')"><a href="https://loud-farm.herokuapp.com">Loud Farm</a></li>
+        </ul>
+    </div>
 
+    <div id="right">
+        <img id="image"src="public/annotation.png">
+        <h3 id="caption">Mariah Carey's 2017 New Year's Eve performance with follow-along lyrics</h3>
+    </div>
+</div>
+    
+<script>
+    
+    var text = {
+        annotation_text : "Mariah Carey's 2017 New Year's Eve performance with follow-along lyrics",
+        gauculator_text : "Sign up to receive email alerts whenever Tufts dining halls have General Gau's chicken",
+        messages_text : "Message board that retrieves messages from a Heroku datastore and updates the page using JQuery",
+        notuber_text : "A 'car ordering' service that displays current location and passenger location on a map",
+        notuberback_text : "The backend for the Not Uber web application on Heroku",
+        portfolio_text : "My personal portfolio, containing a short bio and resume",
+        responsive_text : "A web page that changes color and shows different portions of a GIF depending on viewport size",
+        security_text : "A security review of one of my classmate's homework assignments",
+        loudfarm_text : "A small game created using Phaser.io where you collect as many animals as possible in one minute"
+    };
+    
+    function hover(description) {
+        var new_image = "public/" + description + ".png";
+        var new_text = description + "_text";
+        new_text = getText(text, new_text);
+        
+        document.getElementById("image").src = new_image;
+        document.getElementById("caption").innerHTML = new_text;
+    }
+    
+    function getText(text, new_text) {
+        return text[new_text];
+    }
+    
+</script>
 </body>
 </html>
 
